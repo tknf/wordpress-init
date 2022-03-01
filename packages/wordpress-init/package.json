@@ -1,0 +1,55 @@
+{
+  "name": "@tknf/wordpress-init",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": [
+    "wordpress",
+    "vite"
+  ],
+  "description": "Create Wordpress environment with Vite.",
+  "homepage": "https://github.com/tknf/wordpress-init",
+  "repository": {
+    "url": "https://github.com/tknf/wordpress-init",
+    "directory": "packages/wordpress-init"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "bugs": {
+    "url": "https://github.com/tknf/wordpress-init/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "@tknf/wordpress-init": ".index.js"
+  },
+  "scripts": {
+    "clean": "rimraf build my-project index.js",
+    "test": "cross-env FORCE_COLOR=1 jest",
+    "lint": "eslint --fix './**/*.ts'",
+    "lint:ci": "eslint './**/*.ts'",
+    "format": "prettier --write './**/*.ts'",
+    "format:ci": "prettier --check './**/*.ts'",
+    "build": "tsc && esbuild cli.ts --bundle --platform=node --outfile=index.js",
+    "cli": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.0.1",
+    "inquirer": "^8.2.0",
+    "meow": "^7.1.1",
+    "semver": "^7.3.5",
+    "sort-package-json": "^1.54.0",
+    "strip-ansi": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.0",
+    "esbuild": "^0.14.23"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "extends": ["@tknf/eslint-config-typescript/node-config"],
+  "rules": {
+    "no-else-return": "off",
+    "no-console": "off",
+    "prefer-template": "off"
+  }
+}
