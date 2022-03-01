@@ -1,6 +1,6 @@
 {
   "name": "@tknf/wordpress-init",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "keywords": [
     "wordpress",
@@ -26,7 +26,7 @@
     "access": "public"
   },
   "bin": {
-    "@tknf/wordpress-init": "./index.js"
+    "wordpress-init": "./index.js"
   },
   "scripts": {
     "clean": "rimraf build my-project index.js",
