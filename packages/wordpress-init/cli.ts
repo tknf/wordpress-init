@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import * as path from "path";
 import * as chalk from "chalk";
 import * as inquirer from "inquirer";

@@ -28,6 +28,7 @@ async function createApp({ projectDir, environment, frontendLang, install, quiet
   const projectDirIsCurrentDir = relativeProjectDir === "";
   if (!projectDirIsCurrentDir) {
     if (fse.existsSync(projectDir)) {
+      // TODO
       console.log(`Oops, "${relativeProjectDir}" already exists. Please try again with a different directory.`);
       process.exit(1);
     } else {
@@ -44,7 +45,7 @@ async function createApp({ projectDir, environment, frontendLang, install, quiet
   }
 
   const sharedTemplate = path.resolve(__dirname, "templates", `_shared`);
-  await fse.copy(sharedTemplate, `${projectDir}/${themePath}`);
+  await fse.copy(sharedTemplate, `${projectDir}/${themePath}`, { overwrite: true });
 
   const envTemplate = path.resolve(__dirname, "templates", `_env_${environment}`);
   if (fse.existsSync(envTemplate)) {
