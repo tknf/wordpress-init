@@ -1,7 +1,8 @@
 {
   "name": "@tknf/wordpress-init",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
+  "author": "Tasuku Kuribayashi <kuribayashi@tknf.net>",
   "keywords": [
     "wordpress",
     "vite"
@@ -19,7 +20,8 @@
     "url": "https://github.com/tknf/wordpress-init/issues"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "templates/**/*"
   ],
   "main": "index.js",
   "publishConfig": {
