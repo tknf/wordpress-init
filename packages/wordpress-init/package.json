@@ -26,7 +26,7 @@
     "access": "public"
   },
   "bin": {
-    "@tknf/wordpress-init": ".index.js"
+    "@tknf/wordpress-init": "./index.js"
   },
   "scripts": {
     "clean": "rimraf build my-project index.js",
